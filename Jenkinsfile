@@ -31,25 +31,25 @@ pipeline {
       parallel {
         stage('step 2') {
           steps {
-            sh "`date`  sleep start for step 2"
+            sh " echo `date` ::::: sleep start for step 2"
             sh 'sleep 30'
-            sh "`date`  sleep done for step 2"
+            sh " echo `date` ::::: sleep done for step 2"
           }
         }
 
         stage('step 2.1') {
           steps {
-            sh "`date`  sleep start for step 2.1"
+            sh " echo `date` ::::: sleep start for step 2.1"
             sh 'sleep 35'
-            sh "`date`  sleep done for step 2.1"
+            sh " echo  `date` ::::: sleep done for step 2.1"
           }
         }
 
         stage('step 2.2') {
           steps {
-            sh "`date`  sleep start for step 2.2"
+            sh "echo `date` ::::: sleep start for step 2.2"
             sh 'sleep 48'
-            sh "`date`  sleep done for step 2.2"
+            sh "echo `date` ::::: sleep done for step 2.2"
           }
         }
 
@@ -58,7 +58,7 @@ pipeline {
 
     stage('last') {
       steps {
-        sleep 2
+       ::::: sleep 2
       }
     }
 
