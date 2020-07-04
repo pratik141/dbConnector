@@ -58,7 +58,7 @@ pipeline {
 
     stage('last') {
       steps {
-       ::::: sleep 2
+        sleep 2
       }
     }
 
